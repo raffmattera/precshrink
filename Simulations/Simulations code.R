@@ -19,7 +19,7 @@ library(data.table)
 
 # Suppose to consider an i.i.d. economy where the true expected mean vector and covariance matrix are:
 
-M <- 2
+M <- 1000
 SRp10 <- list()
 SRp30 <- list()
 SRp48 <- list()
@@ -314,9 +314,6 @@ print(paste0("Simulation with P=",j," finished."))
 
 }
 stopCluster(cl)
-rio::export(SRp10, "SRp10.RDS")
-rio::export(SRp30, "SRp30.RDS")
-rio::export(SRp48, "SRp48.RDS")
 
 #-------- Tables
 
