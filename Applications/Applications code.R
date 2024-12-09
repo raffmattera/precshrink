@@ -238,4 +238,27 @@ print(paste0("Dataset ",p," completed"))
 }
 stopCluster(cl)
 
-rio::export(results,"results_m360.RDS")
+# Evaluation
+
+res <- matrix(NA, nrow=15, ncol=12)
+for(i in 1:12){
+  res[,i] <- sharpe(results[[i]]) 
+}
+rownames(res) <-  c("EW","I","SC","PM","c3","c*","LW1",
+                    "LW2","LW3","PM+I","PM+EW","c3+I","c3+EW",
+                    "c*+I", "c*+EW")
+xtable::xtable(round(res,6)*100)
+apply(res, 2, which.max)
+
+# p-values
+
+respval <- matrix(NA, nrow=15, ncol=12)
+for(i in 1:12){
+  for (j in 1:14) {
+    respval[j,i] <- sharpeTesting(results[[i]][,j], results[[i]][,15])$pval 
+  }
+}
+rownames(respval) <-  c("EW","I","SC","PM","c3","c*","LW1",
+                    "LW2","LW3","PM+I","PM+EW","c3+I","c3+EW",
+                    "c*+I", "c*+EW")
+xtable::xtable(respval)
