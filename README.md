@@ -19,9 +19,6 @@ values of M.
 
 The R version used is the 4.4.1. The packages, with their versions, are the following.
 
- [1] PeerPerformance_2.2.5 lmtest_0.9-40        
- [3] zoo_1.8-12            sandwich_3.1-0       
- [5] data.table_1.15.4     doParallel_1.0.17    
- [7] iterators_1.0.14      foreach_1.5.2        
- [9] MASS_7.3-60.2         nlshrink_1.0.1       
-[11] RiskPortfolios_2.1.7  rio_1.1.1         
+ PeerPerformance_2.2.5, lmtest_0.9-40, zoo_1.8-12 , sandwich_3.1-0,      
+ data.table_1.15.4, doParallel_1.0.17, iterators_1.0.14, foreach_1.5.2,        
+ MASS_7.3-60.2, nlshrink_1.0.1, RiskPortfolios_2.1.7,  rio_1.1.1         
