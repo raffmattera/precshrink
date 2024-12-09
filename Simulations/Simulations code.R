@@ -6,8 +6,6 @@
 
 rm(list=ls())
 
-setwd("H:/Il mio Drive/Precision shrinkage/Simulations")
-
 library(rio)
 library(RiskPortfolios)
 library(nlshrink)
