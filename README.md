@@ -6,7 +6,7 @@ A) Simulations code.R: this files implements the simulation study;
 A.1) covestim.R: this files includes the functions used to estimate covariance matrix estimators in the paper. These
 functions are used in the simulation study;
 
-B) Applications code.R: this file implements the empirical anlysis, computes the Sharpe ration and the pvalues;
+B) Applications code.R: this file implements the empirical anlysis, computing the Sharpe ratios and the pvalues;
 B.1) mvp.R: this code includes the function adopted for building portfolios with different estimators.
 The results are equivalent of applying the estimators in covestim.R and then plug-in the estimates
 in the MeanVariancePortfolio formula. In this codes we however use the results of Remark 1 in the paper;
